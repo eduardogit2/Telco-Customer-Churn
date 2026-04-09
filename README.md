@@ -1,4 +1,4 @@
-# Predicción de Abandono de Clientes (Customer Churn)
+# Predicción de Abandono de Clientes (Telco-Customer-Churn)
 
 Este proyecto tiene como objetivo anticipar, mediante un modelo de Machine Learning, si un cliente de la compañía de telecomunicaciones abandonará el servicio en el corto plazo. Utiliza variables clave como el historial de facturación, el tipo de contrato y los servicios adicionales contratados.
 
@@ -14,15 +14,19 @@ Este proyecto tiene como objetivo anticipar, mediante un modelo de Machine Learn
 
 ---
 
-## Tecnologías utilizadas
+## Arquitectura y Tecnologías utilizadas
 
-- Python 3 
-- Pandas / Scikit-learn 
+**Requisitos previos (Prerrequisitos):**
+- Python 3.9 o superior
+- Docker y Docker Compose instalados
+- Git
+
+**Tecnologías:**
+- Python 3 (Pandas, Scikit-learn)
 - MongoDB (Base de datos NoSQL)
 - Docker (Contenerización)
 - GitHub Actions (Integración y despliegue continuo - CI/CD)
 - Render (Plataforma de despliegue Cloud)
-- Git / GitHub (Control de versiones)
 
 ---
 
@@ -47,11 +51,12 @@ Telco-Customer-Churn/
 ├── README.md
 ├── docs/
 │   ├── Planificacion_Proyecto_Grupo_7.pdf
-│   └── Documento_Diseno_Tecnico_Grupo_7.pdf
+│   ├── Grupo_7_Propuesta_de_ítems_a_utilizar.pdf
+│   ├── Documento_Diseno_Tecnico_Grupo_7.pdf 
+│   └── WBS_Planificacion.xlsx
 ├── scripts/
 │   ├── ingesta.py
 │   ├── limpieza.py
-│   ├── transformacion.py
 │   └── entrenamiento.py
 ├── data/
 │   └── 01_Metadata.txt
@@ -69,10 +74,10 @@ Telco-Customer-Churn/
 ## Cómo ejecutar el sistema (entorno ya instalado)
 
 1. Clonar el repositorio  
-   `git clone https://github.com/usuario/agotamiento-stock.git`
+   `git clone https://github.com/eduardogit2/Telco-Customer-Churn.git`
 
 2. Entrar a la carpeta del proyecto  
-   `cd agotamiento-stock`
+   `cd Telco-Customer-Churn`
 
 3. Ejecutar el pipeline manualmente por etapas  
    Ejemplo:  
@@ -91,8 +96,8 @@ El documento de diseño técnico está disponible en:
 
 ---
 
-## Equipo
+## Equipo 7
 
-- Integrante 1 – Procesamiento y limpieza  
-- Integrante 2 – Modelado y entrenamiento  
-- Integrante 3 – Visualización y documentación
+- Integrante 1: Sebastian Salgado  – Procesamiento y limpieza  
+- Integrante 2: Eduardo Uribe  – Modelado y entrenamiento  
+- Integrante 3: Carlos Navarrete – Visualización y documentación
