@@ -1,4 +1,16 @@
 services:
+  app-ingesta:
+    image: python:3.10-slim
+    container_name: python-ingesta
+    depends_on:
+      - mongo-server
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: sh -c "pip install pandas pymongo && python scripts/ingesta.py"
+    networks:
+      - mongodb_network
+
   mongo-server:
     image: mongo:latest
     container_name: mongo-server
@@ -17,8 +29,7 @@ services:
     depends_on:
       - mongo-server
     environment:
-      - ME_CONFIG_MONGODB_SERVER=mongo-server
-      - ME_CONFIG_MONGODB_PORT=27017
+      - ME_CONFIG_MONGODB_URL=mongodb://mongo-server:27017/
     ports:
       - "8081:8081"
     networks:
